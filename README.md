@@ -20,8 +20,7 @@ linter, or sandbox.
 ## Use
 
 The top-level `agents/` and `skills/` directories are distributable source
-layout, following the F# pack. They are not automatically active merely because
-this directory exists.
+layout. They are not automatically active merely because this directory exists.
 
 For a consuming Copilot repository, copy or symlink the agent into
 `.github/agents/rust-coding.agent.md` and each skill directory into
@@ -45,12 +44,9 @@ are used only when applicable and already available under the project's policy.
 
 ## Design and sources
 
-The F# prior art contributes the separation of coding workflow, validation,
-boundary-specific constraints, and consistency with semantically equivalent
-existing code. F# representation, exception, formatting, and orchestration
-rules are not Rust defaults. Unlike the F# pack's explicitly opted-in .NET
-interop surface, Rust FFI constraints apply whenever an actual foreign boundary
-is changed.
+The pack separates coding workflow, validation, and boundary-specific
+constraints, with consistency checks against semantically equivalent existing
+code. Rust FFI constraints apply whenever an actual foreign boundary is changed.
 
 Official-project guidance supplies Rust-specific defaults:
 
